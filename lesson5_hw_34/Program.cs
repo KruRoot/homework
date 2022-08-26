@@ -1,9 +1,4 @@
 ﻿// Homework for lesson 5, #34
-Console.WriteLine("Enter the array's size");
-int arr_size = int.Parse(Console.ReadLine());
-int min = 100;
-int max = 999;
-int even_numbers = 0;
 
 int[] NewArray(int size, int min_digit, int max_digit)
 {
@@ -37,10 +32,13 @@ void PrintArray(int[] prt_array)
     }
 }
 
+Console.WriteLine("Enter the array's size");
+int arr_size = int.Parse(Console.ReadLine());
+int min = 100;
+int max = 999;
+int even_numbers = 0;
 int[] my_arr = NewArray(arr_size, min, max);
-
 PrintArray(my_arr);
-
 even_numbers = FindEven(my_arr, even_numbers);
-
+Console.WriteLine();
 Console.WriteLine($"In this array count of even number: {even_numbers}");
